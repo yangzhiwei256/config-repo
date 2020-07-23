@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.7.0.v201706222054</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="mysql" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://localhost:3306/sample</property>
+            <property name="odaUser">sample</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">c2FtcGxl</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="shop_good" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">good_id</property>
+                    <text-property name="displayName">good_id</text-property>
+                    <text-property name="heading">good_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">good_name</property>
+                    <text-property name="displayName">good_name</text-property>
+                    <text-property name="heading">good_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">good_price</property>
+                    <text-property name="displayName">good_price</text-property>
+                    <text-property name="heading">good_price</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">good_num</property>
+                    <text-property name="displayName">good_num</text-property>
+                    <text-property name="heading">good_num</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">description</property>
+                    <text-property name="displayName">description</text-property>
+                    <text-property name="heading">description</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">good_id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">good_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">good_price</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">good_num</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">mysql</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">good_id</property>
+                    <property name="nativeName">good_id</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">good_name</property>
+                    <property name="nativeName">good_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">good_price</property>
+                    <property name="nativeName">good_price</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">good_num</property>
+                    <property name="nativeName">good_num</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">description</property>
+                    <property name="nativeName">description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from shop_good]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>good_id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>good_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>good_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>good_name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>good_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>good_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>good_price</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>7</design:nativeDataTypeCode>
+            <design:precision>12</design:precision>
+            <design:scale>31</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>good_price</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>good_price</design:label>
+            <design:formattingHints>
+              <design:displaySize>12</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>good_num</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>good_num</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>good_num</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>description</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>description</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>description</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="shipping" id="106">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ship_by</property>
+                    <text-property name="displayName">ship_by</text-property>
+                    <text-property name="heading">ship_by</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">order_id</property>
+                    <text-property name="displayName">order_id</text-property>
+                    <text-property name="heading">order_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">customer_name</property>
+                    <text-property name="displayName">customer_name</text-property>
+                    <text-property name="heading">customer_name</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ship_by</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">order_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">customer_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">mysql</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ship_by</property>
+                    <property name="nativeName">ship_by</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">order_id</property>
+                    <property name="nativeName">order_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">customer_name</property>
+                    <property name="nativeName">customer_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from shipping]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ship_by</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ship_by</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ship_by</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>order_id</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>order_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>order_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>customer_name</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>customer_name</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>customer_name</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="NewStyle" id="105">
+            <property name="color">#FF0000</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="7">
+            <property name="dataSet">shop_good</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">good_id</property>
+                    <text-property name="displayName">good_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["good_id"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">good_name</property>
+                    <text-property name="displayName">good_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["good_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">good_price</property>
+                    <text-property name="displayName">good_price</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["good_price"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">good_num</property>
+                    <text-property name="displayName">good_num</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["good_num"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">description</property>
+                    <text-property name="displayName">description</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">all_name</property>
+                    <text-property name="displayName">all_name</text-property>
+                    <property name="dataType">string</property>
+                    <property name="aggregateFunction">CONCATENATE</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["good_name"]</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Separator</property>
+                            <expression name="value" type="javascript">","</expression>
+                        </structure>
+                        <structure>
+                            <property name="name">Maxlength</property>
+                        </structure>
+                        <structure>
+                            <property name="name">Showallvalues</property>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <list-property name="sort">
+                <structure>
+                    <expression name="key" type="javascript">row["good_id"]</expression>
+                    <property name="direction">desc</property>
+                    <property name="strength">-1</property>
+                </structure>
+            </list-property>
+            <column id="36"/>
+            <column id="38"/>
+            <column id="39"/>
+            <column id="48"/>
+            <header>
+                <row id="8">
+                    <cell id="9">
+                        <label id="10">
+                            <text-property name="text">good_id</text-property>
+                        </label>
+                    </cell>
+                    <cell id="13">
+                        <label id="14">
+                            <text-property name="text">good_price</text-property>
+                        </label>
+                    </cell>
+                    <cell id="15">
+                        <label id="16">
+                            <structure name="toc"/>
+                            <text-property name="text">good_num</text-property>
+                        </label>
+                    </cell>
+                    <cell id="45">
+                        <label id="50">
+                            <text-property name="text">description</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="78">
+                <property name="groupName">NameGroup</property>
+                <property name="interval">none</property>
+                <expression name="keyExpr" type="javascript">row["good_name"]</expression>
+                <expression name="bookmark" type="javascript">row["good_name"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["good_name"]</expression>
+                    <property name="TOCStyle">NewStyle</property>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="79">
+                        <cell id="80">
+                            <data id="91">
+                                <property name="resultSetColumn">good_name</property>
+                            </data>
+                        </cell>
+                        <cell id="82"/>
+                        <cell id="83"/>
+                        <cell id="84"/>
+                    </row>
+                </header>
+                <footer>
+                    <row id="85">
+                        <cell id="86"/>
+                        <cell id="88"/>
+                        <cell id="89"/>
+                        <cell id="90"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="19">
+                    <property name="textAlign">center</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <expression name="testExpr" type="javascript">row.__rownum % 2</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                        </structure>
+                    </list-property>
+                    <cell id="20">
+                        <data id="21">
+                            <property name="resultSetColumn">good_id</property>
+                        </data>
+                    </cell>
+                    <cell id="24">
+                        <data id="25">
+                            <property name="resultSetColumn">good_price</property>
+                        </data>
+                    </cell>
+                    <cell id="26">
+                        <data id="27">
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">ge</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#FF0000</property>
+                                    <expression name="testExpr" type="javascript">row["good_num"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value type="javascript">30</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">good_num</property>
+                        </data>
+                    </cell>
+                    <cell id="46">
+                        <text id="49">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<VALUE-OF>row["good_name"]</VALUE-OF>:<VALUE-OF>row["good_price"] >= 5 ? "high" : "low"</VALUE-OF>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="30">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <cell id="31"/>
+                    <cell id="33"/>
+                    <cell id="34"/>
+                    <cell id="47"/>
+                </row>
+            </footer>
+        </table>
+        <text id="43">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<CENTER><B><span style="font-size: larger">
+Shipped Orders Report
+</B></span><BR>
+<FONT size="small">For the month of March</FONT></CENTER>]]></text-property>
+        </text>
+        <text id="44">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[Report generated on <VALUE-OF format="y/M/d">new Date()</VALUE-OF> ]]></text-property>
+        </text>
+        <grid id="55">
+            <property name="height">0.5625in</property>
+            <column id="56"/>
+            <column id="57"/>
+            <row id="58">
+                <cell id="59"/>
+                <cell id="60"/>
+            </row>
+            <row id="61">
+                <cell id="62">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">2</property>
+                    <property name="verticalAlign">middle</property>
+                    <label id="77">
+                        <text-property name="text">合并单元格</text-property>
+                    </label>
+                </cell>
+                <cell id="63"/>
+            </row>
+            <row id="64">
+                <property name="borderBottomStyle">solid</property>
+                <property name="borderBottomWidth">medium</property>
+                <property name="height">0.2604166666666667in</property>
+                <cell id="66"/>
+            </row>
+        </grid>
+        <table id="107">
+            <property name="dataSet">shipping</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ship_by</property>
+                    <text-property name="displayName">ship_by</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ship_by"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">order_id</property>
+                    <text-property name="displayName">order_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["order_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">customer_name</property>
+                    <text-property name="displayName">customer_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["customer_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="120"/>
+            <column id="121"/>
+            <column id="122"/>
+            <header>
+                <row id="108">
+                    <cell id="109">
+                        <label id="123">
+                            <text-property name="text">ship_by</text-property>
+                        </label>
+                    </cell>
+                    <cell id="110">
+                        <label id="125">
+                            <text-property name="text">order_id</text-property>
+                        </label>
+                    </cell>
+                    <cell id="111">
+                        <label id="127">
+                            <text-property name="text">customer_name</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="129">
+                <property name="groupName">shipping</property>
+                <property name="interval">week</property>
+                <property name="intervalRange">1.0</property>
+                <expression name="keyExpr" type="javascript">row["ship_by"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["ship_by"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="130">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <cell id="131">
+                            <data id="138">
+                                <structure name="dateTimeFormat">
+                                    <property name="category">Custom</property>
+                                    <property name="pattern">y/M/d</property>
+                                </structure>
+                                <property name="resultSetColumn">ship_by</property>
+                            </data>
+                        </cell>
+                        <cell id="132"/>
+                        <cell id="133"/>
+                    </row>
+                </header>
+                <footer>
+                    <row id="134">
+                        <cell id="135"/>
+                        <cell id="136"/>
+                        <cell id="137"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="112">
+                    <property name="textAlign">center</property>
+                    <cell id="113">
+                        <data id="124">
+                            <structure name="dateTimeFormat">
+                                <property name="category">Custom</property>
+                                <property name="pattern">y/M/d</property>
+                            </structure>
+                            <property name="resultSetColumn">ship_by</property>
+                        </data>
+                    </cell>
+                    <cell id="114">
+                        <data id="126">
+                            <property name="resultSetColumn">order_id</property>
+                        </data>
+                    </cell>
+                    <cell id="115">
+                        <data id="128">
+                            <property name="resultSetColumn">customer_name</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="116">
+                    <cell id="117"/>
+                    <cell id="118"/>
+                    <cell id="119"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

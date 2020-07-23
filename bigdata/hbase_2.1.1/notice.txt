@@ -1,0 +1,2 @@
+HBase2.1.1 兼容Hadoop_3.0.3问题：
+1. htrace-core版本不匹配，需要将hrace-core jar包引入Hbase classpath路径

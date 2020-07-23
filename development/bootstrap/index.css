@@ -1,0 +1,15 @@
+/* body 组件顶部填充70px,防止导航栏遮住(Bootstrap 3 需设置)  */
+/* body{
+    padding-top: 70px;
+} */
+
+div .left{
+     border:1px solid #ddd;
+}
+
+.content-body{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    bottom: 0px;
+}

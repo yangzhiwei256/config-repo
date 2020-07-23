@@ -1,0 +1,19 @@
+# sbt configuration file for Windows
+
+# Set the java args
+
+#-mem 1024 was added in sbt.bat as default
+
+#-Xms1024m
+#-Xmx1024m
+#-Xss4M
+#-XX:ReservedCodeCacheSize=128m
+
+# Set the extra sbt options
+-Dsbt.log.format=true
+-Dsbt.boot.directory=E:/Repository/sbt/boot
+-Dsbt.global.base=E:/Repository/sbt
+-Dsbt.ivy.home=E:/Repository/ivy2
+-Dsbt.repository.secure=true
+-Dsbt.override.build.repos=true
+-Dsbt.repository.config=C:/Application/sbt-1.3.10/conf/repo.properties

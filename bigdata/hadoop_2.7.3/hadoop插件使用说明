@@ -1,0 +1,14 @@
+windows开发Hadoop应用
+
+步骤：
+1. 配置HADOOP_HOME环境变量，并引入PATH路径
+2. 将winutils.exe放在${HADOOP_HOME}/bin目录
+3. 将hadoop.dll放在System32目录
+4. MapReduce程序即可运行
+
+
+hadoop eclipse插件配置
+注意：host这里必须与core-site.xml文件中配置的主机名一致，windows需做host域名映射（hosts文件：可选）
+
+特别注意：
+hadoop集群的域名配置，负责可能导致端口监听问题，客户端不能远程连接hadoop集群

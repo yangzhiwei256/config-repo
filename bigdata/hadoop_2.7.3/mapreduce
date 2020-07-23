@@ -1,0 +1,22 @@
+思想：分而治之
+
+
+Mapper:
+Hadoop框架会将数据文件根据InputFormate（JOB定义）切分为InputSplit数据结构，每个InputSplit处理一次调用一次Map函数
+
+过程：原始的k-v对，映射为新的中间k-v对，中间会对key进行排序，提高数据处理效率
+
+
+Reducer:
+处理Mapper生成的k-v中间键值对结果进行汇总处理
+
+Partition：分区：数量与redcue任务一致
+功能：控制Mapper生成的KV对的切分，形成不同的分区
+默认分区器: HashPartitioner
+
+
+Counter:计数器
+功能：hadoop mr任务监控任务
+
+
+Job:标识一个MR任务的配置

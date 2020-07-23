@@ -1,0 +1,4 @@
+1. 初始化Hive元数据： schematool -dbType <db type> -initSchema
+2. 修改${system:java.io.tmpdir}
+3. hive-default.xml.template 修改为hive-site.xml
+4. 上传数据源驱动包到lib目录

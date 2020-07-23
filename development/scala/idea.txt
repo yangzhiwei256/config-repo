@@ -1,0 +1,2 @@
+Scala VM PARAMETERS:
+-Dsbt.ivy.home=E:/Repository/ivy2 -Dsbt.global.base=E:/Repository/sbt -Dsbt.boot.directory=E:/Repository/sbt/boot

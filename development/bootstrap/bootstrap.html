@@ -1,0 +1,209 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <title>发版系统</title>
+</head>
+
+<body>
+  <!-- fixed-bottom: 底部对齐 fixed-top: 顶部对齐 -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <!-- ml-auto: 右侧对齐  mr-auto: 左侧对齐 -->
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="#">Action 1</a>
+            <a class="dropdown-item" href="#">Action 2</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  
+  <div class="container-fluid" style="padding:0px;">
+    <div class="row content-body">
+      <div class="col-md-2 left" style="padding:0px;">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#projectConfig" aria-expanded="true"
+                  aria-controls="projectConfig">
+                  项目配置
+                </button>
+              </h5>
+            </div>
+            <div id="projectConfig" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">前端项目配置</li>
+                <li class="list-group-item">后端项目配置</li>
+                <li class="list-group-item">前端容器配置</li>
+                <li class="list-group-item">后端容器配置</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="versionControl">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  版本管理
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="versionControl" data-parent="#accordion">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">项目配置</li>
+                <li class="list-group-item">项目配置记录</li>
+                <li class="list-group-item">项目构建</li>
+                <li class="list-group-item">项目构建记录</li>
+                <li class="list-group-item">项目部署</li>
+                <li class="list-group-item">项目部署记录</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 left" style="padding:0px;">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <p class="text-left">管理控制台</p>
+                <hr />
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-secondary">Secondary</button>
+                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-danger">Danger</button>
+                  <button type="button" class="btn btn-warning">Warning</button>
+                  <button type="button" class="btn btn-info">Info</button>
+                  <button type="button" class="btn btn-light">Light</button>
+                  <button type="button" class="btn btn-dark">Dark</button>
+                  <button type="button" class="btn btn-link">Link</button>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid" style="padding:0px;">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      最新提醒
+                    </div>
+                    <div class="card-body">
+                      <div class="alert alert-primary" role="alert">
+                        This is a primary alert—check it out!
+                      </div>
+                      <div class="alert alert-secondary" role="alert">
+                        This is a secondary alert—check it out!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      我的任务
+                    </div>
+                    <div class="card-body">
+                      <div class="alert alert-info" role="alert">
+                        This is a primary alert—check it out!
+                        <span class="badge badge-light" style="float: right;">9</span>
+                      </div>
+                      <div class="alert alert-info" role="alert">
+                        This is a secondary alert—check it out!
+                        <span class="badge badge-light" style="float: right;">10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      最新订单
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header">
+                      工程进度
+                    </div>
+                    <div class="card-body">
+                        <span class="badge badge-success">Success</span><br/><br/>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./jquery-3.2.1.slim.min.js"></script>
+  <script src="./popper.min.js"></script>
+  <script src="./bootstrap.min.js"></script>
+</body>
+
+</html>

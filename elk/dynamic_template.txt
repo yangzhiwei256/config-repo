@@ -1,0 +1,43 @@
+PUT /_template/logdirtpl
+{
+  "index_patterns": ["ecm*"],
+  "settings": {
+    "index": {
+        "refresh_interval": "5s"
+      }
+  },
+  "mappings": {
+    "_default_": {
+	  "dynamic_templates": [
+	    {"clientIp": {
+    		"match": "clientIp", 
+    		"match_mapping_type": "string",
+    		"mapping": {
+    			"type": "text",
+    			"fielddata":true
+	  	}
+		}},
+		{"logdate": {
+    		"match": "logdate", 
+    		"match_mapping_type": "string",
+    		"mapping": {
+    			"type": "text",
+    			"fielddata":true
+	  	}
+		}},
+		{"index": {
+    		"match": "index", 
+    		"match_mapping_type": "string",
+    		"mapping": {
+    			"type": "text",
+    			"fielddata":true
+	  	}
+		}}],
+      "_source": {
+        "enabled": true
+      }
+    }
+  }
+}
+
+

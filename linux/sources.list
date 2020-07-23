@@ -1,0 +1,11 @@
+# 
+
+# deb cdrom:[Debian GNU/Linux 9.5.0 _Stretch_ - Official amd64 xfce-CD Binary-1 20180714-10:25]/ stretch main
+
+deb http://mirrors.ustc.edu.cn/debian/ stretch main
+deb-src http://mirrors.ustc.edu.cn/debian/ stretch main
+deb http://mirrors.ustc.edu.cn/debian/ stretch-updates main
+deb-src http://mirrors.ustc.edu.cn/debian/ stretch-updates main
+deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/debian stretch stable
+deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-xenial main
+# deb-src [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/debian stretch stable
